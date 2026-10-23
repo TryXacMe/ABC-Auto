@@ -1308,7 +1308,6 @@ option {
     font-weight: 700;
 }
 
-/* ================= FOOTER STYLES ================= */
 
 .footer {
     background-color: #222224;
@@ -1320,7 +1319,6 @@ option {
 
 .footer__container {
     max-width: 1520px;
-    /* Maksimal kenglik 1520px qilib belgilandi */
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -1335,7 +1333,6 @@ option {
     color: #ffffff;
 }
 
-/* 1. Yuqori navigatsiya paneli */
 .footer__top-nav {
     background-color: #1a1a1c;
     border-bottom: 1px solid #2d2d30;
@@ -1362,7 +1359,6 @@ option {
     color: #d92525 !important;
 }
 
-/* 2. O'rta qism */
 .footer__middle {
     padding: 25px 0 15px 0;
     border-bottom: 1px solid #2d2d30;
@@ -2889,12 +2885,7 @@ option {
 
     .intro__text {
         font-size: 18px;
-        /* Matn juda katta bo'lsa sig'masligi mumkin */
         line-height: 1.3;
-    }
-
-    .cards__img {
-        width: 40%;
     }
 }
 
