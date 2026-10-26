@@ -838,7 +838,8 @@ body {
 }
 
 .favorites-header-section {
-    width: 1320px;
+    width: 100%;
+    max-width: 1320px;
     padding: 24px 0 20px 0;
     background-color: #ffffff;
     border-bottom: 1px solid #f0f0f0;
