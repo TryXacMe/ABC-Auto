@@ -1,870 +1,737 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html,
 body {
-    background-color: #ffffff;
-    color: #262626;
+  background-color: #ffffff;
+  color: #262626;
 }
 
 header,
 section {
-    width: 100%;
-    max-width: 1520px;
-    margin: 0 auto;
-}
-
-.text {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
-    color: #737373;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
-
-.container__header {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background-color: rgb(232, 232, 232);
-}
-
-.imgs {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    margin-right: 20px;
-}
-
-.hr {
-    width: 1px;
-    height: 35px;
-    background-color: gray;
-}
-
-.header__top {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    gap: 16px;
-    padding: 0 16px;
-}
-
-.top__text {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 19px;
-    color: #262626;
-}
-
-.top__span {
-    background-color: red;
-    border-radius: 10px;
-    color: white;
-    padding: 3px;
+  width: 100%;
+  max-width: 1520px;
+  margin: 0 auto;
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
+
+/* ==========================================
+   UMUMIY LINK VA BUTTONLAR
+========================================== */
 
 a {
-    text-decoration: none;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
-    color: #262626;
+  text-decoration: none;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #262626;
+  cursor: pointer;
+  transition: color 0.25s ease, background-color 0.25s ease,
+    transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.top__menu {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
+a:hover {
+  color: #d31411;
 }
 
-.span__menu {
-    color: red;
+button {
+  cursor: pointer;
+  transition: all 0.25s ease;
 }
 
-.top__tel1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 28px;
-    text-align: right;
-    text-transform: uppercase;
-    color: #262626;
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
-.top__tel2 {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
-    text-align: right;
-    text-transform: uppercase;
-    color: #262626;
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #d31411;
+  outline-offset: 3px;
 }
 
-.top__btn {
-    border-radius: 8px;
-    background-color: red;
-    color: white;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 19px;
-    text-align: center;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    border: none;
-    padding: 16px 12px;
+/* ==========================================
+   HEADER
+========================================== */
+
+.text {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #737373;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.container__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgb(232, 232, 232);
+}
+
+.imgs {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-right: 20px;
+}
+
+.hr {
+  width: 1px;
+  height: 35px;
+  background-color: gray;
 }
 
 .header__top {
-    margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 0 16px;
+  margin-top: 30px;
+}
+
+.top__text {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #262626;
+}
+
+.top__span {
+  background-color: red;
+  border-radius: 10px;
+  color: white;
+  padding: 3px;
+}
+
+.top__menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.top__tel1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: right;
+  text-transform: uppercase;
+  color: #262626;
+}
+
+.top__tel2 {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: right;
+  text-transform: uppercase;
+  color: #262626;
+}
+
+.top__btn {
+  border-radius: 8px;
+  background-color: red;
+  color: #ffffff;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  text-transform: uppercase;
+  border: none;
+  padding: 16px 12px;
+}
+
+.top__btn:hover {
+  background-color: #b9100e;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 14px rgba(211, 20, 17, 0.25);
 }
 
 .likes {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 42px;
 }
 
 .bottom__box {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    gap: 16px;
-    padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 0 16px;
 }
 
 .header__bottom {
-    margin-top: 30px;
+  margin-top: 30px;
 }
 
 .bottom__text {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 19px;
-    text-transform: uppercase;
-    color: #262626;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: #262626;
 }
 
+.bottom__text:hover {
+    color: red;
+}
+
+/* ==========================================
+   CARDS
+========================================== */
+
 .cards__title {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 47px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #262626;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 47px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #262626;
 }
 
 .cards__box__top {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
 }
 
 .cards__box__bottom {
-    display: flex;
-    align-items: center;
-    gap: 32px;
-    margin-left: 130px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-left: 130px;
 }
 
 .cards__img {
-    width: 400px;
+  width: 400px;
 }
+
+/* ==========================================
+   FOOTER
+========================================== */
 
 .footer {
-    background-color: #222529;
-    color: #a0a5ad;
-    font-size: 14px;
-    border-top-left-radius: 24px;
-    border-top-right-radius: 24px;
-    overflow: hidden;
+  background-color: #1f2226;
+  color: #8c939d;
+  font-size: 13px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  overflow: hidden;
 }
 
-/* Top Nav Links Bar */
+/* Footer Navigation */
+
 .footer-top-nav {
-    border-bottom: 1px solid #2d3136;
-    padding: 24px 0;
+  border-bottom: 1px solid #2a2e33;
+  padding: 22px 0;
+  background-color: #1a1c1f;
 }
 
 .nav-links {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .nav-links a {
-    color: #ffffff;
-    font-weight: 700;
-    font-size: 14px;
-    letter-spacing: 0.5px;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.5px;
 }
 
 .nav-links a:hover {
-    color: #d31411;
+  color: #d31411;
 }
 
-/* Footer Main Grid */
+/* Footer Main */
+
 .footer-main {
-    padding: 50px 0;
-    border-bottom: 1px solid #2d3136;
+  padding: 45px 0;
+  border-bottom: 1px solid #2a2e33;
 }
 
 .footer-grid {
-    display: grid;
-    grid-template-columns: 3.5fr 1fr 1.5fr 1.8fr;
-    gap: 40px;
+  display: grid;
+  grid-template-columns: 4fr 1.2fr 1.8fr 2.2fr;
+  gap: 30px;
 }
 
 .footer-col h3 {
-    color: #ffffff;
-    font-size: 14px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    text-transform: uppercase;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .col-title {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
 }
 
 .col-title h3 {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .more-link {
-    color: #717780;
-    font-size: 13px;
-    text-decoration: underline;
+  color: #717780;
+  font-size: 12px;
+  text-decoration: underline;
 }
 
-/* Car Brands Grid */
+.more-link:hover {
+  color: #d31411;
+}
+
+/* Car Brands */
+
 .car-brands-grid {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 15px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
 }
 
 .car-brands-grid ul {
-    list-style: none;
+  list-style: none;
 }
 
 .car-brands-grid li {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .car-brands-grid a,
 .footer-menu a {
-    color: #8c939d;
-    font-size: 13px;
+  color: #8c939d;
+  font-size: 12px;
 }
 
 .car-brands-grid a:hover,
 .footer-menu a:hover {
-    color: #ffffff;
+  color: #d31411;
 }
 
 /* Footer Menu */
+
 .footer-menu {
-    list-style: none;
+  list-style: none;
 }
 
 .footer-menu li {
-    margin-bottom: 12px;
+  margin-bottom: 12px;
 }
 
 /* Contacts */
+
 .contacts-list {
-    list-style: none;
+  list-style: none;
 }
 
 .contacts-list li {
-    display: flex;
-    gap: 14px;
-    margin-bottom: 18px;
-    align-items: flex-start;
-    font-size: 13px;
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+  align-items: flex-start;
+  font-size: 12px;
 }
 
-.red-icon {
-    background: #d31411;
-    color: white;
-    width: 22px;
-    height: 22px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 11px;
-    flex-shrink: 0;
-    margin-top: 2px;
-}
-
-.phones a {
-    display: block;
-    color: #ffffff;
-    font-weight: 600;
-    font-size: 14px;
-}
-
-.map-link {
-    color: #d31411;
-    text-decoration: underline;
-}
-
-.city-select select {
-    width: 100%;
-    padding: 10px 14px;
-    background-color: #2d3136;
-    border: 1px solid #3a3f45;
-    color: #ffffff;
-    border-radius: 8px;
-    outline: none;
-    cursor: pointer;
-    font-size: 14px;
-}
-
-/* Footer Bottom Section */
-.footer-bottom {
-    padding: 30px 0;
-    font-size: 12px;
-    color: #636b75;
-    background-color: #1a1c1e;
-}
-
-.footer-bottom-content {
-    display: grid;
-    grid-template-columns: 1.5fr 2fr 1fr;
-    gap: 30px;
-    align-items: center;
-}
-
-.copy {
-    color: #ffffff;
-    font-weight: 600;
-    margin-bottom: 8px;
-    font-size: 13px;
-}
-
-.legal-links a {
-    color: #636b75;
-    margin-right: 15px;
-    text-decoration: underline;
-}
-
-.disclaimer {
-    line-height: 1.5;
-}
-
-.rating-badge {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.yandex-rating {
-    background: #ffffff;
-    padding: 8px 16px;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: #000000;
-    font-weight: bold;
-}
-
-.y-red {
-    color: red;
-    font-size: 18px;
-}
-
-.stars {
-    color: #ffcc00;
-    font-size: 14px;
-}
-
-.footer {
-    background-color: #1f2226;
-    color: #8c939d;
-    font-size: 13px;
-    border-top-left-radius: 16px;
-    border-top-right-radius: 16px;
-    overflow: hidden;
-}
-
-/* Top Navigation Bar */
-.footer-top-nav {
-    border-bottom: 1px solid #2a2e33;
-    padding: 22px 0;
-    background-color: #1a1c1f;
-}
-
-.nav-links {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.nav-links a {
-    color: #ffffff;
-    font-weight: 700;
-    font-size: 13px;
-    letter-spacing: 0.5px;
-}
-
-.nav-links a:hover {
-    color: #d31411;
-}
-
-/* Footer Main Content Grid */
-.footer-main {
-    padding: 45px 0;
-    border-bottom: 1px solid #2a2e33;
-}
-
-.footer-grid {
-    display: grid;
-    grid-template-columns: 4fr 1.2fr 1.8fr 2.2fr;
-    gap: 30px;
-}
-
-.footer-col h3 {
-    color: #ffffff;
-    font-size: 12px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-.col-title {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 20px;
-}
-
-.col-title h3 {
-    margin-bottom: 0;
-}
-
-.more-link {
-    color: #717780;
-    font-size: 12px;
-    text-decoration: underline;
-}
-
-/* Car Brands Grid */
-.car-brands-grid {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 10px;
-}
-
-.car-brands-grid ul {
-    list-style: none;
-}
-
-.car-brands-grid li {
-    margin-bottom: 10px;
-}
-
-.car-brands-grid a,
-.footer-menu a {
-    color: #8c939d;
-    font-size: 12px;
-}
-
-.car-brands-grid a:hover,
-.footer-menu a:hover {
-    color: #ffffff;
-}
-
-/* Footer Menu */
-.footer-menu {
-    list-style: none;
-}
-
-.footer-menu li {
-    margin-bottom: 12px;
-}
-
-/* Contacts */
-.contacts-list {
-    list-style: none;
-}
-
-.contacts-list li {
-    display: flex;
-    gap: 12px;
-    margin-bottom: 16px;
-    align-items: flex-start;
-    font-size: 12px;
-}
-
-/* Asl dizayndagi qizil nuqtalar */
 .red-dot {
-    width: 8px;
-    height: 8px;
-    background-color: #d31411;
-    border-radius: 50%;
-    display: inline-block;
-    margin-top: 5px;
-    flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  background-color: #d31411;
+  border-radius: 50%;
+  display: inline-block;
+  margin-top: 5px;
+  flex-shrink: 0;
 }
 
 .phones a {
-    display: block;
-    color: #ffffff;
-    font-weight: 600;
-    font-size: 13px;
-    line-height: 1.4;
+  display: block;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.phones a:hover {
+  color: #d31411;
 }
 
 .map-link {
-    color: #d31411;
-    text-decoration: underline;
-    display: inline-block;
-    margin-top: 2px;
+  color: #d31411;
+  text-decoration: underline;
+  display: inline-block;
+  margin-top: 2px;
 }
+
+.map-link:hover {
+  color: #ffffff;
+}
+
+/* City Select */
 
 .city-select select {
-    width: 100%;
-    padding: 10px 14px;
-    background-color: #26292d;
-    border: 1px solid #353a40;
-    color: #ffffff;
-    border-radius: 6px;
-    outline: none;
-    cursor: pointer;
-    font-size: 13px;
-    margin-top: 5px;
+  width: 100%;
+  padding: 10px 14px;
+  background-color: #26292d;
+  border: 1px solid #353a40;
+  color: #ffffff;
+  border-radius: 6px;
+  outline: none;
+  cursor: pointer;
+  font-size: 13px;
+  margin-top: 5px;
 }
 
-/* Footer Bottom Section */
+/* Footer Bottom */
+
 .footer-bottom {
-    padding: 25px 0;
-    font-size: 11px;
-    color: #636b75;
-    background-color: #17191c;
+  padding: 25px 0;
+  font-size: 11px;
+  color: #636b75;
+  background-color: #17191c;
 }
 
 .footer-bottom-content {
-    display: grid;
-    grid-template-columns: 1.5fr 2.5fr 1fr;
-    gap: 30px;
-    align-items: center;
+  display: grid;
+  grid-template-columns: 1.5fr 2.5fr 1fr;
+  gap: 30px;
+  align-items: center;
 }
 
 .copy {
-    color: #ffffff;
-    font-weight: 600;
-    margin-bottom: 8px;
-    font-size: 12px;
+  color: #ffffff;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 12px;
 }
 
 .legal-links a {
-    color: #636b75;
-    margin-right: 15px;
-    text-decoration: underline;
+  color: #636b75;
+  margin-right: 15px;
+  text-decoration: underline;
+}
+
+.legal-links a:hover {
+  color: #d31411;
 }
 
 .disclaimer {
-    line-height: 1.4;
+  line-height: 1.4;
 }
 
-/* Asl rasmdagi to'g'ri Yandex Reyting bloki */
+/* Yandex Rating */
+
 .rating-badge {
-    display: flex;
-    justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .yandex-rating {
-    background: #ffffff;
-    padding: 8px 14px;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: #000000;
-    font-weight: bold;
+  background: #ffffff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #000000;
+  font-weight: bold;
 }
 
 .y-red {
-    color: #ff0000;
-    font-size: 16px;
-    font-weight: 900;
+  color: #ff0000;
+  font-size: 16px;
+  font-weight: 900;
 }
 
 .score {
-    background-color: #2ecc71;
-    color: #ffffff;
-    padding: 2px 8px;
-    border-radius: 6px;
-    font-size: 14px;
+  background-color: #2ecc71;
+  color: #ffffff;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 14px;
 }
 
 .stars {
-    color: #ffb400;
-    font-size: 12px;
-    letter-spacing: 1px;
-}
-
-/* ==========================================
-   RESPONSIVE DESIGN (MEDIA QUERIES)
-   ========================================== */
-
-@media (max-width: 1200px) {
-    .footer-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 30px;
-    }
-
-    .wide-col {
-        grid-column: span 2;
-    }
-
-    .car-brands-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    .footer-bottom-content {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .rating-badge {
-        justify-content: flex-start;
-    }
-}
-
-@media (max-width: 768px) {
-    .container {
-        padding: 0 20px;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
-    }
-
-    .footer-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .wide-col {
-        grid-column: span 1;
-    }
-
-    .car-brands-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  color: #ffb400;
+  font-size: 12px;
+  letter-spacing: 1px;
 }
 
 .favorites-header-section {
-    width: 100%;
-    max-width: 1320px;
-    padding: 24px 0 20px 0;
-    background-color: #ffffff;
-    border-bottom: 1px solid #f0f0f0;
+  width: 100%;
+  max-width: 1320px;
+  padding: 24px 0 20px 0;
+  background-color: #ffffff;
+  border-bottom: 1px solid #f0f0f0;
 }
 
-/* Breadcrumbs (Yo'l ko'rsatkich) */
+/* Breadcrumbs */
+
 .breadcrumbs {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 12px;
-    color: #999999;
-    margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #999999;
+  margin-bottom: 16px;
 }
 
 .breadcrumbs a {
-    color: #999999;
-    text-decoration: none;
-    transition: color 0.2s ease;
+  color: #999999;
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 .breadcrumbs a:hover {
-    color: #333333;
+  color: #d31411;
 }
 
 .breadcrumbs .separator {
-    color: #cccccc;
+  color: #cccccc;
 }
 
 .breadcrumbs .current {
-    color: #999999;
+  color: #999999;
 }
 
-/* Main Content Alignment */
+/* Main Content */
+
 .favorites-header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .title-and-tabs {
-    display: flex;
-    align-items: center;
-    gap: 32px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
 }
 
-/* Title (Избранное) */
+/* Page Title */
+
 .page-title {
-    font-size: 42px;
-    font-weight: 800;
-    color: #1a1a1a;
-    letter-spacing: -0.5px;
-    line-height: 1;
+  font-size: 42px;
+  font-weight: 800;
+  color: #1a1a1a;
+  letter-spacing: -0.5px;
+  line-height: 1;
 }
 
-/* Tabs Group (Tugmalar guruhi) */
+/* Tabs */
+
 .tabs-group {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .tab-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 10px 18px;
-    border-radius: 12px;
-    border: none;
-    background-color: #f4f5f7;
-    color: #333333;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 18px;
+  border-radius: 12px;
+  border: none;
+  background-color: #f4f5f7;
+  color: #333333;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 .tab-btn .badge {
-    font-weight: 700;
+  font-weight: 700;
 }
 
-/* Active State (Qizil faol tugma) */
+/* Active Tab */
+
 .tab-btn.active {
-    background-color: #d31411;
-    color: #ffffff;
+  background-color: #d31411;
+  color: #ffffff;
 }
 
 .tab-btn.active .badge {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 .tab-btn:not(.active) .badge {
-    color: #d31411;
+  color: #d31411;
 }
 
 .tab-btn:hover:not(.active) {
-    background-color: #e8eaed;
+  background-color: #e8eaed;
+  color: #d31411;
+  transform: translateY(-2px);
 }
 
-/* Total Count (O'ng tomon) */
+.tab-btn.active:hover {
+  background-color: #b9100e;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.tab-btn.active:hover .badge {
+  color: #ffffff;
+}
+
+/* Total Count */
+
 .total-count {
-    font-size: 14px;
-    color: #666666;
+  font-size: 14px;
+  color: #666666;
 }
 
 .total-count strong {
-    color: #1a1a1a;
-    font-weight: 700;
+  color: #1a1a1a;
+  font-weight: 700;
 }
 
 /* ==========================================
-   RESPONSIVE DESIGN (MEDIA QUERIES)
-   ========================================== */
+   RESPONSIVE DESIGN
+========================================== */
 
-/* Planshetlar uchun (max-width: 1024px) */
-@media (max-width: 1024px) {
-    .favorites-header-content {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
-    }
+@media (max-width: 1200px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
 
-    .total-count {
-        align-self: flex-start;
-    }
+  .wide-col {
+    grid-column: span 2;
+  }
+
+  .car-brands-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .footer-bottom-content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .rating-badge {
+    justify-content: flex-start;
+  }
 }
 
-/* Mobil telefonlar uchun (max-width: 680px) */
+/* Planshet */
+
+@media (max-width: 1024px) {
+  .favorites-header-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .total-count {
+    align-self: flex-start;
+  }
+}
+
+/* Telefon */
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wide-col {
+    grid-column: span 1;
+  }
+
+  .car-brands-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 680px) {
-    .container {
-        padding: 0 16px;
-    }
+  .container {
+    padding: 0 16px;
+  }
 
-    .title-and-tabs {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 16px;
-        width: 100%;
-    }
+  .title-and-tabs {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    width: 100%;
+  }
 
-    .page-title {
-        font-size: 32px;
-    }
+  .page-title {
+    font-size: 32px;
+  }
 
-    .tabs-group {
-        width: 100%;
-        overflow-x: auto;
-        padding-bottom: 8px;
-        white-space: nowrap;
-    }
+  .tabs-group {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    white-space: nowrap;
+  }
 
-    .tab-btn {
-        padding: 8px 14px;
-        font-size: 13px;
-        flex-shrink: 0;
-    }
+  .tab-btn {
+    padding: 8px 14px;
+    font-size: 13px;
+    flex-shrink: 0;
+  }
 }

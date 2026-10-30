@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+a {
+  color: red;
+}
+
 header,
 section {
   width: 1520px;
@@ -127,10 +131,6 @@ a {
   justify-content: center;
 
   gap: 16px;
-}
-
-.span__menu {
-  color: red;
 }
 
 .top__tel1 {
@@ -4952,14 +4952,20 @@ textarea:focus {
     display: none;
   }
 
-  .top__top {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+  .top__text {
+    display: none;
   }
 
   .logo {
     width: 60%;
+  }
+
+  .imgs {
+    justify-content: space-between;
+  }
+
+  .likes {
+    display: none;
   }
 }
 
@@ -4978,12 +4984,6 @@ textarea:focus {
 
   .offers__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .top__top {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
   }
 
   .logo {
